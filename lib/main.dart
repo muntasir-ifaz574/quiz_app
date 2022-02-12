@@ -1,19 +1,57 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 import 'package:quiz_app/data/questions_list.dart';
 import 'package:quiz_app/screens/result_screen.dart';
 
-void main() {
-  runApp(const MyApp());
+// void main() {
+//   runApp(const MyApp());
+// }
+
+// class MyApp extends StatelessWidget {
+//   const MyApp({Key? key}) : super(key: key);
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//       home: HomeScreen(),
+//       debugShowCheckedModeBanner: false,
+//     );
+//   }
+// }
+
+void main() => runApp(const MaterialApp(
+      home: Splash(),
+      debugShowCheckedModeBanner: false,
+    ));
+
+class Splash extends StatefulWidget {
+  const Splash({Key? key}) : super(key: key);
+
+  @override
+  _SplashState createState() => _SplashState();
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class _SplashState extends State<Splash> {
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration(seconds: 5), () {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => HomeScreen(),
+        ),
+      );
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: HomeScreen(),
-      debugShowCheckedModeBanner: false,
+    return Scaffold(
+      backgroundColor: Colors.blue.shade200,
+      body: Center(
+        child: Lottie.asset('assets/qs.json'),
+      ),
     );
   }
 }
@@ -37,6 +75,17 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Colors.blue.shade400,
+        title: Text(
+          "Quiz App",
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+      ),
       backgroundColor: mainColor,
       body: Padding(
         padding: EdgeInsets.all(18),

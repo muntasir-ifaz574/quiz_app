@@ -13,7 +13,6 @@ class _ResultScreenState extends State<ResultScreen> {
   @override
   Widget build(BuildContext context) {
     Color mainColor = Color(0xff36867d);
-    Color secondColor = Color(0xFF117eeb);
     return Scaffold(
       backgroundColor: mainColor,
       body: Center(
