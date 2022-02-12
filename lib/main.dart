@@ -34,7 +34,10 @@ class _SplashState extends State<Splash> {
     return Scaffold(
       backgroundColor: Colors.blue.shade200,
       body: Center(
-        child: Lottie.asset('assets/qs.json'),
+        child: Lottie.asset(
+          'assets/qs.json',
+          height: 300,
+        ),
       ),
     );
   }
