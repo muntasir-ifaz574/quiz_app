@@ -3,22 +3,6 @@ import 'package:lottie/lottie.dart';
 import 'package:quiz_app/data/questions_list.dart';
 import 'package:quiz_app/screens/result_screen.dart';
 
-// void main() {
-//   runApp(const MyApp());
-// }
-
-// class MyApp extends StatelessWidget {
-//   const MyApp({Key? key}) : super(key: key);
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       home: HomeScreen(),
-//       debugShowCheckedModeBanner: false,
-//     );
-//   }
-// }
-
 void main() => runApp(const MaterialApp(
       home: Splash(),
       debugShowCheckedModeBanner: false,
