@@ -9,7 +9,6 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -111,23 +110,6 @@ class _HomeScreenState extends State<HomeScreen> {
                                 print(score);
                               }
                             },
-                      // () {
-                      //   setState(() {
-                      //     isPressed = true;
-                      //   });
-                      //   if (questions[index]
-                      //       .answer!
-                      //       .entries
-                      //       .toList()[i]
-                      //       .value) {
-                      //     score += 10;
-                      //   }
-                      // else {
-                      //   setState(() {
-                      //     btnColor = isWrong;
-                      //   });
-                      // }
-                      // },
                       child: Text(
                         questions[index].answer!.keys.toList()[i],
                         style: TextStyle(
